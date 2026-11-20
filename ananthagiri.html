@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ananthagiri Hills | ASR Tribal Tourism Portal</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="destinations.css">
+    <link rel="stylesheet" href="ananthagiri.css">
+
+    <!-- JavaScript -->
+    <script src="ananthagiri.js" defer></script>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo new.png" alt="ASR Logo">
+            <span>ASR TRIBAL TOURISM PORTAL</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="destinations.html" class="active">Destinations</a></li>
+        </ul>
+
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+</header>
+
+<!-- ================= BACK NAVIGATION ================= -->
+<div class="detail-back-wrap">
+    <a href="destinations.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Destinations
+    </a>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="detail-hero-ananthagiri">
+    <div class="hero-overlay">
+        <span class="hero-badge"><i class="fas fa-mountain"></i> Eastern Ghats Coffee Hills</span>
+        <h1>Welcome to Ananthagiri Hills</h1>
+        <p>
+            The enchanting mountain gateway to the ASR agency tracts. Renowned for rolling coffee plantations,
+            ancient limestone caves, cascading jungle waterfalls, and cool mountain breezes across the Eastern Ghats.
+        </p>
+    </div>
+</section>
+
+<!-- ================= OVERVIEW ================= -->
+<section class="detail-page">
+    <div class="detail-container">
+        <div class="detail-content">
+            <div class="detail-card">
+                <h2>About Ananthagiri Hills</h2>
+                <p>
+                    Perched at an elevation of approximately 1,168 meters (3,832 feet) in the Alluri Sitharama Raju District,
+                    Ananthagiri Hills is one of the most picturesque hill stations in Andhra Pradesh. Nestled along the scenic
+                    winding ghat road between Visakhapatnam and Araku Valley, the region is celebrated as the historic cradle
+                    of Andhra's coffee culture, first cultivated here under British supervision in 1898.
+                </p>
+                <p>
+                    Ananthagiri is enveloped by dense Eastern Ghats forests, medicinal plant reserves, and organic coffee plantations
+                    sheltered under tall silver oak canopies. It is home to iconic landmarks including the million-year-old
+                    <strong>Borra Caves</strong>, the roaring 100-foot <strong>Thatiguda (Tadimada) Waterfalls</strong>,
+                    the <strong>Tyda Jungle Bells Eco-Camp</strong>, and sacred temples near mountain springs that give birth to
+                    the sacred Gosthani River.
+                </p>
+            </div>
+
+            <div class="detail-card">
+                <h2>Best Time to Visit</h2>
+                <ul class="detail-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>October to March:</strong> The prime sightseeing season with cool, crisp breezes, pleasant days, misty mornings, and blooming coffee gardens.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>July to September:</strong> Monsoon season brings roaring waterfalls like Thatiguda and Katiki into their most thunderous glory amidst lush green hills.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Early Mornings & Evenings:</strong> Best for witnessing spectacular fog blankets rolling through the valleys, bird watching, and sunset photography.</li>
+                </ul>
+            </div>
+        </div>
+
+        <aside class="info-panel">
+            <div class="detail-card">
+                <h3>Quick Travel Info</h3>
+                <ul class="mini-info">
+                    <li><strong>Location:</strong> <span>ASR District, Andhra Pradesh</span></li>
+                    <li><strong>Elevation:</strong> <span>1,168 m (3,832 ft)</span></li>
+                    <li><strong>From Vizag:</strong> <span>Approx. 85 km (2 hrs drive)</span></li>
+                    <li><strong>From Araku:</strong> <span>Approx. 26 km</span></li>
+                    <li><strong>From Tyda:</strong> <span>Approx. 12 km</span></li>
+                    <li><strong>Known For:</strong> <span>Coffee Estates, Caves, Waterfalls</span></li>
+                    <li><strong>Weather:</strong> <span>Pleasant, breezy & cool year-round</span></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+</section>
+
+<!-- ================= PLACES EXPLORER & LIVE WEATHER ================= -->
+<section class="places-section" id="ananthagiri-places">
+    <div class="section-heading">
+        <p class="section-kicker">ANANTHAGIRI EXPLORER</p>
+        <h2>Places to Visit in & Around Ananthagiri Hills</h2>
+        <p>Explore historic caves, cascading waterfalls, vast coffee estates, and scenic lookout points. Click any card to locate it instantly on the interactive map.</p>
+    </div>
+
+    <div class="travel-tools">
+        <article class="weather-panel" aria-live="polite">
+            <div class="weather-icon"><i class="fas fa-cloud-sun"></i></div>
+            <div>
+                <p class="section-kicker">LIVE HILL WEATHER</p>
+                <h3 id="weather-location">Ananthagiri Hills</h3>
+                <p id="weather-status">Fetching current conditions...</p>
+            </div>
+            <strong id="weather-temperature">--°C</strong>
+        </article>
+
+        <div class="ananthagiri-map-wrap">
+            <iframe id="ananthagiri-map" title="Interactive Map of Ananthagiri Hills" src="https://www.google.com/maps?q=Ananthagiri+Hills+Andhra+Pradesh&output=embed" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <!-- Dynamic places populated by ananthagiri.js -->
+    <div class="ananthagiri-location-grid" id="ananthagiri-location-grid"></div>
+</section>
+
+<!-- ================= RESORTS & STAY OPTIONS ================= -->
+<section class="stay-section" id="ananthagiri-stays">
+    <div class="section-heading">
+        <p class="section-kicker">ACCOMMODATION & ECO-STAYS</p>
+        <h2>Resorts & Stays in Ananthagiri Hills</h2>
+        <p>Stay amidst nature in authentic wooden log huts, APTDC forest cottages, and hill-view resorts overlooking coffee plantations.</p>
+    </div>
+
+    <div class="stay-grid">
+        <!-- Stay Card 1 -->
+        <div class="stay-card">
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=700&q=80" alt="Haritha Jungle Bells Tyda">
+            <div class="stay-info">
+                <h3>APTDC Haritha Jungle Bells, Tyda</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Tyda Eco-Camp, Vizag-Araku Road</p>
+                <p><i class="fas fa-tree"></i> Wooden log huts, Swiss tents, trekking & archery</p>
+                <p><i class="fas fa-phone"></i> Contact: +91 94408 12345</p>
+            </div>
+            <div class="stay-actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=Haritha+Jungle+Bells+Tyda" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View on Map</a>
+                <a href="tel:+919440812345" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+
+        <!-- Stay Card 2 -->
+        <div class="stay-card">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=700&q=80" alt="The Royal Resorts Ananthagiri">
+            <div class="stay-info">
+                <h3>The Royal Resorts and Restaurant (RRR)</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Near Ananthagiri View Point</p>
+                <p><i class="fas fa-bed"></i> Valley-view deluxe suites, private balconies & lawns</p>
+                <p><i class="fas fa-phone"></i> Contact: +91 99898 33445</p>
+            </div>
+            <div class="stay-actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=The+Royal+Resorts+Ananthagiri" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View on Map</a>
+                <a href="tel:+919989833445" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+
+        <!-- Stay Card 3 -->
+        <div class="stay-card">
+            <img src="https://images.unsplash.com/photo-1587061949409-02df41d5e562?auto=format&fit=crop&w=700&q=80" alt="Haritha Hill Resort Ananthagiri">
+            <div class="stay-info">
+                <h3>APTDC Haritha Hill Resort</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Main Ghat Road, Ananthagiri</p>
+                <p><i class="fas fa-mountain"></i> Government tourism cottages with scenic valley vistas</p>
+                <p><i class="fas fa-phone"></i> Contact: +91 98481 22334</p>
+            </div>
+            <div class="stay-actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=Haritha+Resort+Ananthagiri" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View on Map</a>
+                <a href="tel:+919848122334" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+
+        <!-- Stay Card 4 -->
+        <div class="stay-card">
+            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=700&q=80" alt="Bansi Resorts Ananthagiri">
+            <div class="stay-info">
+                <h3>Bansi Resorts & Valley Cottages</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Near Borra Caves Junction, Ananthagiri</p>
+                <p><i class="fas fa-campground"></i> Spacious family cottages, garden dining & campfires</p>
+                <p><i class="fas fa-phone"></i> Contact: +91 97003 44556</p>
+            </div>
+            <div class="stay-actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=Bansi+Resorts+Ananthagiri" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View on Map</a>
+                <a href="tel:+919700344556" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+
+        <!-- Stay Card 5 -->
+        <div class="stay-card">
+            <img src="https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=700&q=80" alt="Mountain View Eco Retreat">
+            <div class="stay-info">
+                <h3>Mountain View Eco Retreat & Camp</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Thatiguda Falls Trail, Ananthagiri</p>
+                <p><i class="fas fa-cloud"></i> Nature tents, organic plantation walks & bonfire nights</p>
+                <p><i class="fas fa-phone"></i> Contact: +91 91212 77889</p>
+            </div>
+            <div class="stay-actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=Mountain+View+Camp+Ananthagiri" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View on Map</a>
+                <a href="tel:+919121277889" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+
+        <!-- Stay Card 6 -->
+        <div class="stay-card">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=700&q=80" alt="Tyda Wilderness Nature Camp">
+            <div class="stay-info">
+                <h3>Tyda Wilderness Nature Camp</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Tyda Reserve Forest Area</p>
+                <p><i class="fas fa-binoculars"></i> Jungle trekking, tree canopies, bird watching & cabins</p>
+                <p><i class="fas fa-phone"></i> Contact: +91 94900 66778</p>
+            </div>
+            <div class="stay-actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=Tyda+Nature+Camp+Andhra+Pradesh" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View on Map</a>
+                <a href="tel:+919490066778" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= RESTAURANTS & DINING ================= -->
+<section class="dining-section" id="ananthagiri-restaurants">
+    <div class="section-heading">
+        <p class="section-kicker">LOCAL FLAVORS & DINING</p>
+        <h2>Restaurants & Food Spots in Ananthagiri</h2>
+        <p>Enjoy mountain bamboo chicken, spicy Andhra meals, local snacks, and world-famous organic hill filter coffee.</p>
+    </div>
+
+    <div class="dining-grid">
+        <!-- Dining Card 1 -->
+        <div class="dining-card">
+            <div class="dining-card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=700&q=80" alt="Authentic Tribal Bamboo Chicken">
+                <span class="dining-badge"><i class="fas fa-fire"></i> Must Try Tribal Dish</span>
+            </div>
+            <div class="dining-info">
+                <h3>Authentic Tribal Bamboo (Bongu) Chicken</h3>
+                <p>An unforgettable Eastern Ghats culinary specialty: tender chicken infused with indigenous forest spices, stuffed inside raw bamboo stalks, and slow-roasted over wood charcoal embers with zero cooking oil.</p>
+                <div class="dining-meta">
+                    <span><i class="fas fa-utensils"></i> Specialty: Bamboo Chicken & Bamboo Biryani</span>
+                    <span><i class="fas fa-clock"></i> Timings: 10:00 AM – 9:30 PM</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Near Thatiguda Falls & Borra Caves Junction</span>
+                </div>
+            </div>
+            <div class="dining-actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=Bamboo+Chicken+Ananthagiri" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fas fa-location-dot"></i> Locate Food Stall</a>
+            </div>
+        </div>
+
+        <!-- Dining Card 2 -->
+        <div class="dining-card">
+            <div class="dining-card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=700&q=80" alt="Jungle Bells Multi-Cuisine Restaurant">
+                <span class="dining-badge"><i class="fas fa-tree"></i> Forest Dining</span>
+            </div>
+            <div class="dining-info">
+                <h3>Jungle Bells Multi-Cuisine Restaurant</h3>
+                <p>Scenic woodland dining venue at Tyda nature camp serving traditional Andhra thali meals, steaming country chicken gravies, freshly baked rotis, vegetable pulao, and evening snacks in a peaceful forest setting.</p>
+                <div class="dining-meta">
+                    <span><i class="fas fa-utensils"></i> Specialty: Andhra Meals, Tiffin Buffet, Chicken Curry</span>
+                    <span><i class="fas fa-clock"></i> Timings: 7:30 AM – 10:00 PM</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Inside Haritha Jungle Bells Camp, Tyda</span>
+                </div>
+            </div>
+            <div class="dining-actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=Jungle+Bells+Restaurant+Tyda" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fas fa-location-dot"></i> View on Map</a>
+            </div>
+        </div>
+
+        <!-- Dining Card 3 -->
+        <div class="dining-card">
+            <div class="dining-card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80" alt="The Royal Family Restaurant">
+                <span class="dining-badge"><i class="fas fa-star"></i> Multi-Cuisine</span>
+            </div>
+            <div class="dining-info">
+                <h3>The Royal Family Restaurant (RRR)</h3>
+                <p>Comfortable indoor and open-terrace seating overlooking the green Ananthagiri hills. Popular for delicious dum biryanis, spicy pepper chicken, paneer butter masala, and hot naans.</p>
+                <div class="dining-meta">
+                    <span><i class="fas fa-utensils"></i> Specialty: Dum Biryani, Tandoori, Andhra Specials</span>
+                    <span><i class="fas fa-clock"></i> Timings: 8:00 AM – 10:30 PM</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Main Ghat Road, Ananthagiri</span>
+                </div>
+            </div>
+            <div class="dining-actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=The+Royal+Resort+Restaurant+Ananthagiri" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fas fa-location-dot"></i> View on Map</a>
+            </div>
+        </div>
+
+        <!-- Dining Card 4 -->
+        <div class="dining-card">
+            <div class="dining-card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=700&q=80" alt="Ghat Road Coffee & Pepper Snack Point">
+                <span class="dining-badge"><i class="fas fa-mug-hot"></i> Organic Coffee</span>
+            </div>
+            <div class="dining-info">
+                <h3>Ghat Road Coffee & Pepper Snack Point</h3>
+                <p>A must-stop roadside refreshments cafe perched above the misty valley. Serves hot 100% organic Ananthagiri filter coffee, spicy black pepper tea, hot mirchi bajjis, and crunchy onion pakodas.</p>
+                <div class="dining-meta">
+                    <span><i class="fas fa-utensils"></i> Specialty: Ananthagiri Filter Coffee, Mirchi Bajji, Black Pepper Tea</span>
+                    <span><i class="fas fa-clock"></i> Timings: 6:30 AM – 8:30 PM</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Ananthagiri View Point Ghat Curve</span>
+                </div>
+            </div>
+            <div class="dining-actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=Ananthagiri+Coffee+Viewpoint+Stall" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fas fa-location-dot"></i> View on Map</a>
+            </div>
+        </div>
+
+        <!-- Dining Card 5 -->
+        <div class="dining-card">
+            <div class="dining-card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=700&q=80" alt="Borra Caves Food Court & Tribal Kitchen">
+                <span class="dining-badge"><i class="fas fa-utensils"></i> Cave Junction</span>
+            </div>
+            <div class="dining-info">
+                <h3>Borra Caves Food Court & Tribal Kitchen</h3>
+                <p>A lively food cluster right outside the entrance of Borra Caves. Features stalls serving hot bamboo chicken, aromatic country chicken curries, freshly fried snacks, and fresh hill produce.</p>
+                <div class="dining-meta">
+                    <span><i class="fas fa-utensils"></i> Specialty: Bamboo Biryani, Country Chicken, Forest Honey</span>
+                    <span><i class="fas fa-clock"></i> Timings: 9:00 AM – 6:30 PM</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Borra Caves Entrance Complex</span>
+                </div>
+            </div>
+            <div class="dining-actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=Borra+Caves+Food+Court" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fas fa-location-dot"></i> View on Map</a>
+            </div>
+        </div>
+
+        <!-- Dining Card 6 -->
+        <div class="dining-card">
+            <div class="dining-card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=700&q=80" alt="Sri Padmanabha Tiffin & Meals Corner">
+                <span class="dining-badge"><i class="fas fa-bowl-rice"></i> South Indian</span>
+            </div>
+            <div class="dining-info">
+                <h3>Sri Padmanabha Tiffin & Meals Corner</h3>
+                <p>Traditional pure vegetarian eatery known for comforting South Indian morning breakfast including piping-hot idlis, crispy dosas, and spicy tomato-coconut chutney, followed by wholesome lunch thalis.</p>
+                <div class="dining-meta">
+                    <span><i class="fas fa-utensils"></i> Specialty: Ghee Dosa, Idli-Vada, Full Meals</span>
+                    <span><i class="fas fa-clock"></i> Timings: 6:30 AM – 3:30 PM, 5:30 PM – 9:30 PM</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Near Ananthagiri Temple Junction</span>
+                </div>
+            </div>
+            <div class="dining-actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=Tiffin+Center+Ananthagiri+Temple" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fas fa-location-dot"></i> View on Map</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="footer-content">
+        <h2>🌿 ASR TRIBAL TOURISM PORTAL</h2>
+        <p>Discover Nature • Preserve Culture • Empower Tribal Communities</p>
+
+        <div class="social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <p class="copyright">© 2026 ASR Tribal Tourism Portal. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
