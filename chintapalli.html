@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinthapalli | ASR Tribal Tourism Portal</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="destinations.css">
+    <link rel="stylesheet" href="chintapalli.css">
+
+    <!-- JavaScript -->
+    <script src="chintapalli.js" defer></script>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo new.png" alt="ASR Logo">
+            <span>ASR TRIBAL TOURISM PORTAL</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="destinations.html" class="active">Destinations</a></li>
+        </ul>
+
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+</header>
+
+<!-- ================= BACK NAVIGATION ================= -->
+<div class="detail-back-wrap">
+    <a href="destinations.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Destinations
+    </a>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="detail-hero-chintapalli">
+    <div class="hero-overlay">
+        <span class="hero-badge"><i class="fas fa-tree"></i> Eastern Ghats Highlands</span>
+        <h1>Welcome to Chinthapalli</h1>
+        <p>
+            An enchanting high-altitude destination nestled in the Eastern Ghats of Alluri Sitarama Raju District.
+            Celebrated for sprawling pine forests, chilly winters, pristine waterfalls, high-altitude agro-tourism, and rich tribal heritage.
+        </p>
+    </div>
+</section>
+
+<!-- ================= OVERVIEW ================= -->
+<section class="detail-page">
+    <div class="detail-container">
+        <div class="detail-content">
+            <div class="detail-card">
+                <h2>About Chinthapalli</h2>
+                <p>
+                    Chinthapalli (also known as Chintapalle) is located at an altitude of approximately 839 meters (2,753 feet)
+                    above sea level in the Eastern Ghats of ASR District, Andhra Pradesh. Famous for its cool misty mornings,
+                    chilly winter breezes, and sprawling pine forests, the town has earned fame as the "Hidden Ooty" of Andhra Pradesh.
+                </p>
+                <p>
+                    The region is deeply tied to the Indian freedom struggle. It was at the historic Chinthapalli police station in August 1922
+                    that the legendary hero <strong>Alluri Sitarama Raju</strong> launched the historic Rampa Rebellion to defend tribal rights.
+                    Today, visitors flock to Chinthapalli to explore organic strawberry orchards, high-altitude agro-tourism research facilities,
+                    peaceful coffee plantations, and stunning tiered waterfalls like Kothapalli.
+                </p>
+            </div>
+
+            <div class="detail-card">
+                <h2>Best Time to Visit</h2>
+                <ul class="detail-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>October to February:</strong> Chilly winter climate (temperatures often drop below 10°C), ideal for mist, fog, and fresh strawberry picking.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>July to September:</strong> Monsoon season transforms the hills into lush green carpets with vibrant, gushing waterfalls.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Early Mornings & Evenings:</strong> Perfect for experiencing cloud beds, golden sunrises, and tranquil walks in the pine woods.</li>
+                </ul>
+            </div>
+        </div>
+
+        <aside class="info-panel">
+            <div class="detail-card">
+                <h3>Quick Travel Info</h3>
+                <ul class="mini-info">
+                    <li><strong>Location:</strong> <span>ASR District, Andhra Pradesh</span></li>
+                    <li><strong>Elevation:</strong> <span>839 m (2,753 ft)</span></li>
+                    <li><strong>From Vizag:</strong> <span>Approx. 135 km (3.5 hrs drive)</span></li>
+                    <li><strong>From Paderu:</strong> <span>Approx. 45 km</span></li>
+                    <li><strong>From Lambasingi:</strong> <span>Approx. 30 km</span></li>
+                    <li><strong>Known For:</strong> <span>Pine Forest, Strawberry, Waterfalls</span></li>
+                    <li><strong>Weather:</strong> <span>Cool & crisp; sharp winter chill</span></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+</section>
+
+<!-- ================= PLACES EXPLORER & LIVE WEATHER ================= -->
+<section class="places-section" id="chintapalli-places">
+    <div class="section-heading">
+        <p class="section-kicker">CHINTHAPALLI EXPLORER</p>
+        <h2>Places to Visit in & Around Chinthapalli</h2>
+        <p>Explore prominent scenic spots, waterfalls, pine groves, and agro-tourism hubs. Click any card to locate it instantly on the interactive map.</p>
+    </div>
+
+    <div class="travel-tools">
+        <article class="weather-panel" aria-live="polite">
+            <div class="weather-icon"><i class="fas fa-cloud-meatball"></i></div>
+            <div>
+                <p class="section-kicker">LIVE HILL WEATHER</p>
+                <h3 id="weather-location">Chinthapalli Hills</h3>
+                <p id="weather-status">Fetching current conditions...</p>
+            </div>
+            <strong id="weather-temperature">--°C</strong>
+        </article>
+
+        <div class="chintapalli-map-wrap">
+            <iframe id="chintapalli-map" title="Interactive Map of Chinthapalli" src="https://www.google.com/maps?q=Chintapalli+Andhra+Pradesh&output=embed" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <!-- Dynamic places populated by chintapalli.js -->
+    <div class="chintapalli-location-grid" id="chintapalli-location-grid"></div>
+</section>
+
+<!-- ================= RESORTS & STAY OPTIONS ================= -->
+<section class="stay-section" id="chintapalli-stays">
+    <div class="section-heading">
+        <p class="section-kicker">ACCOMMODATION & RETREATS</p>
+        <h2>Resorts & Stays in Chinthapalli Area</h2>
+        <p>Choose from peaceful forest resorts, luxury eco-domes, state tourism cottages, and scenic tent camping under starlit mountain skies.</p>
+    </div>
+
+    <div class="stay-grid">
+        <!-- Stay Card 1 -->
+        <div class="stay-card">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=700&q=80" alt="APTDC Haritha Resort Lambasingi">
+            <div class="stay-info">
+                <h3>APTDC Haritha Resort</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Lambasingi - Chinthapalli Road</p>
+                <p><i class="fas fa-bed"></i> Deluxe AC/Non-AC rooms, lush lawns & hill views</p>
+                <p><i class="fas fa-phone"></i> Contact: +91 94408 12345</p>
+            </div>
+            <div class="stay-actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=Haritha+Resort+Lambasingi" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View on Map</a>
+                <a href="tel:+919440812345" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+
+        <!-- Stay Card 2 -->
+        <div class="stay-card">
+            <img src="https://images.unsplash.com/photo-1587061949409-02df41d5e562?auto=format&fit=crop&w=700&q=80" alt="Hamsa Hill Resort Tajangi">
+            <div class="stay-info">
+                <h3>Hamsa Hill Resort & Eco-Pods</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Overlooking Tajangi Reservoir</p>
+                <p><i class="fas fa-campground"></i> Unique geodesic eco-domes & wooden cottages</p>
+                <p><i class="fas fa-phone"></i> Contact: +91 98481 22334</p>
+            </div>
+            <div class="stay-actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=Hamsa+Hill+Resort+Tajangi" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View on Map</a>
+                <a href="tel:+919848122334" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+
+        <!-- Stay Card 3 -->
+        <div class="stay-card">
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=700&q=80" alt="Lambasingi Valley View Resorts">
+            <div class="stay-info">
+                <h3>Lambasingi Valley View Resorts</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Scenic valley highway, Chinthapalli zone</p>
+                <p><i class="fas fa-fire"></i> Cozy family cottages, night bonfires & Dhimsa dance</p>
+                <p><i class="fas fa-phone"></i> Contact: +91 97003 44556</p>
+            </div>
+            <div class="stay-actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=Lambasingi+Valley+View+Resorts" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View on Map</a>
+                <a href="tel:+919700344556" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+
+        <!-- Stay Card 4 -->
+        <div class="stay-card">
+            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=700&q=80" alt="RARS Agro-Tourism Eco Cottages">
+            <div class="stay-info">
+                <h3>RARS Agro-Tourism Eco Cottages</h3>
+                <p><i class="fas fa-map-marker-alt"></i> RARS Campus, Chinthapalli Town</p>
+                <p><i class="fas fa-seedling"></i> Eco-friendly guest houses right by experimental farms</p>
+                <p><i class="fas fa-phone"></i> Contact: +91 89372 23311</p>
+            </div>
+            <div class="stay-actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=Regional+Agricultural+Research+Station+Chintapalli" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View on Map</a>
+                <a href="tel:+918937223311" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+
+        <!-- Stay Card 5 -->
+        <div class="stay-card">
+            <img src="https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=700&q=80" alt="Leela Sri Nature Resorts & Camping">
+            <div class="stay-info">
+                <h3>Leela Sri Nature Resorts & Camping</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Misty Hill Road, Lambasingi - Chinthapalli</p>
+                <p><i class="fas fa-mountain"></i> Tented nature camping, cottages & spacious lawns</p>
+                <p><i class="fas fa-phone"></i> Contact: +91 91212 77889</p>
+            </div>
+            <div class="stay-actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=Leela+Sri+Resorts+Lambasingi" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View on Map</a>
+                <a href="tel:+919121277889" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+
+        <!-- Stay Card 6 -->
+        <div class="stay-card">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=700&q=80" alt="Snow Bowl Hill Resorts">
+            <div class="stay-info">
+                <h3>Snow Bowl Hill Resorts</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Near Strawberry Farms, Chinthapalli Circuit</p>
+                <p><i class="fas fa-snowflake"></i> Chilly night stays, barbecue facility & campfire</p>
+                <p><i class="fas fa-phone"></i> Contact: +91 94900 66778</p>
+            </div>
+            <div class="stay-actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=Snow+Bowl+Resorts+Lambasingi" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View on Map</a>
+                <a href="tel:+919490066778" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= RESTAURANTS & DINING ================= -->
+<section class="dining-section" id="chintapalli-restaurants">
+    <div class="section-heading">
+        <p class="section-kicker">LOCAL FLAVORS & DINING</p>
+        <h2>Restaurants & Food Spots in Chinthapalli</h2>
+        <p>Indulge in authentic tribal culinary delicacies, fresh mountain bamboo chicken, spicy Andhra meals, and organic hill coffee.</p>
+    </div>
+
+    <div class="dining-grid">
+        <!-- Dining Card 1 -->
+        <div class="dining-card">
+            <div class="dining-card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=700&q=80" alt="Tribal Bongu Bamboo Chicken">
+                <span class="dining-badge"><i class="fas fa-fire"></i> Must Try Tribal Dish</span>
+            </div>
+            <div class="dining-info">
+                <h3>Authentic Tribal Bongu Chicken</h3>
+                <p>Traditional tribal culinary delicacy where farm chicken is marinated in fresh mountain herbs, packed inside green bamboo stalks, and slow-roasted over burning wood embers without a drop of oil.</p>
+                <div class="dining-meta">
+                    <span><i class="fas fa-utensils"></i> Specialty: Bamboo Chicken & Bamboo Biryani</span>
+                    <span><i class="fas fa-clock"></i> Timings: 11:00 AM – 9:00 PM</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Near Kothapalli Falls & Chinthapalli Main Junction</span>
+                </div>
+            </div>
+            <div class="dining-actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=Bamboo+Chicken+Chintapalli" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fas fa-location-dot"></i> Locate Food Stall</a>
+            </div>
+        </div>
+
+        <!-- Dining Card 2 -->
+        <div class="dining-card">
+            <div class="dining-card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=700&q=80" alt="Haritha Multi-Cuisine Restaurant">
+                <span class="dining-badge"><i class="fas fa-star"></i> Family Restaurant</span>
+            </div>
+            <div class="dining-info">
+                <h3>Haritha Multi-Cuisine Restaurant</h3>
+                <p>Clean, family-friendly dining serving delicious South Indian thalis, steaming hot Andhra non-veg gravies, chapati curries, fried rice, and fresh vegetarian meals prepared with hygienic care.</p>
+                <div class="dining-meta">
+                    <span><i class="fas fa-utensils"></i> Specialty: Andhra Meals, Biryani, Tiffin Buffets</span>
+                    <span><i class="fas fa-clock"></i> Timings: 7:30 AM – 10:30 PM</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Inside Haritha Resort Campus</span>
+                </div>
+            </div>
+            <div class="dining-actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=Haritha+Restaurant+Lambasingi" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fas fa-location-dot"></i> View on Map</a>
+            </div>
+        </div>
+
+        <!-- Dining Card 3 -->
+        <div class="dining-card">
+            <div class="dining-card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80" alt="Valley Spice Dhaba">
+                <span class="dining-badge"><i class="fas fa-pepper-hot"></i> Highway Dhaba</span>
+            </div>
+            <div class="dining-info">
+                <h3>Valley Spice Dhaba & Restaurant</h3>
+                <p>Popular highway pitstop catering to tourists traveling between Paderu and Chinthapalli. Well-known for spicy pepper chicken, egg curries, hot rotis, and steaming ginger tea.</p>
+                <div class="dining-meta">
+                    <span><i class="fas fa-utensils"></i> Specialty: Country Chicken Curry, Naan, Tandoori</span>
+                    <span><i class="fas fa-clock"></i> Timings: 10:00 AM – 11:00 PM</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Paderu - Chinthapalli Ghat Highway</span>
+                </div>
+            </div>
+            <div class="dining-actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=Valley+Spice+Restaurant+Chintapalli" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fas fa-location-dot"></i> View on Map</a>
+            </div>
+        </div>
+
+        <!-- Dining Card 4 -->
+        <div class="dining-card">
+            <div class="dining-card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=700&q=80" alt="Chinthapalli Tiffin & Meals Center">
+                <span class="dining-badge"><i class="fas fa-coffee"></i> Local Breakfast</span>
+            </div>
+            <div class="dining-info">
+                <h3>Chinthapalli Tiffin & Meals Center</h3>
+                <p>A beloved local eatery serving authentic Andhra morning breakfasts including piping-hot ghee idlis, crunchy medu vadas, and crispy dosas served with fiery peanut and allam (ginger) chutney.</p>
+                <div class="dining-meta">
+                    <span><i class="fas fa-utensils"></i> Specialty: Mysore Bonda, Ghee Dosa, Pesarattu</span>
+                    <span><i class="fas fa-clock"></i> Timings: 6:00 AM – 2:30 PM, 5:00 PM – 9:30 PM</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Main Bazaar Road, Chinthapalli</span>
+                </div>
+            </div>
+            <div class="dining-actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=Tiffin+Center+Chintapalli+Main+Road" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fas fa-location-dot"></i> View on Map</a>
+            </div>
+        </div>
+
+        <!-- Dining Card 5 -->
+        <div class="dining-card">
+            <div class="dining-card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=700&q=80" alt="Tajangi Lakeside Cafe">
+                <span class="dining-badge"><i class="fas fa-water"></i> Lakeside Refreshments</span>
+            </div>
+            <div class="dining-info">
+                <h3>Tajangi Lakeside Cafe & Refreshments</h3>
+                <p>Scenic open-air seating area overlooking the tranquil Tajangi water reservoir. Enjoy hot mirchi bajjis, fresh roasted sweet corn, spicy pakodas, and hot filter coffee during cool evenings.</p>
+                <div class="dining-meta">
+                    <span><i class="fas fa-utensils"></i> Specialty: Hot Bajjis, Roasted Corn, Masala Tea</span>
+                    <span><i class="fas fa-clock"></i> Timings: 8:00 AM – 7:00 PM</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Adjacent to Tajangi Reservoir Promenade</span>
+                </div>
+            </div>
+            <div class="dining-actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=Tajangi+Reservoir+Refreshments" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fas fa-location-dot"></i> View on Map</a>
+            </div>
+        </div>
+
+        <!-- Dining Card 6 -->
+        <div class="dining-card">
+            <div class="dining-card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=700&q=80" alt="High Altitude Coffee & Strawberry Parlour">
+                <span class="dining-badge"><i class="fas fa-mug-hot"></i> Organic Cafe</span>
+            </div>
+            <div class="dining-info">
+                <h3>High-Altitude Coffee & Strawberry Parlour</h3>
+                <p>Charming cafe celebrating the mountain produce of Chinthapalli and Lambasingi. Savor freshly brewed organic shade-grown filter coffee, fresh strawberry shakes, and homemade fruit preserves.</p>
+                <div class="dining-meta">
+                    <span><i class="fas fa-utensils"></i> Specialty: Araku Filter Coffee, Strawberry Shakes, Fruit Salads</span>
+                    <span><i class="fas fa-clock"></i> Timings: 8:00 AM – 9:00 PM</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Strawberry Farm Route, Lambasingi - Chinthapalli</span>
+                </div>
+            </div>
+            <div class="dining-actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=Coffee+Strawberry+Cafe+Lambasingi" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fas fa-location-dot"></i> View on Map</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="footer-content">
+        <h2>🌿 ASR TRIBAL TOURISM PORTAL</h2>
+        <p>Discover Nature • Preserve Culture • Empower Tribal Communities</p>
+
+        <div class="social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <p class="copyright">© 2026 ASR Tribal Tourism Portal. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
