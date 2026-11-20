@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paderu | ASR Tribal Tourism Portal</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="destinations.css">
+    <link rel="stylesheet" href="paderu.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo new.png" alt="ASR Logo">
+            <span>ASR TRIBAL TOURISM PORTAL</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="destinations.html" class="active">Destinations</a></li>
+        </ul>
+
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+</header>
+
+<!-- ================= BACK NAVIGATION ================= -->
+
+<div class="detail-back-wrap">
+    <a href="destinations.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Destinations
+    </a>
+</div>
+
+<!-- ================= HERO ================= -->
+
+<section class="detail-hero">
+    <div class="hero-overlay">
+        <h1>Paderu</h1>
+        <p>
+            A scenic tribal destination in the Eastern Ghats, known for misty hills,
+            cool weather, waterfalls, and rich indigenous culture.
+        </p>
+    </div>
+</section>
+
+<!-- ================= OVERVIEW ================= -->
+
+<section class="detail-page">
+    <div class="detail-container">
+        <div class="detail-content">
+            <div class="detail-card">
+                <h2>About Paderu</h2>
+                <p>
+                    Paderu is one of the most beautiful tribal destinations in Andhra Pradesh,
+                    nestled in the Eastern Ghats. Surrounded by dense forests, coffee estates,
+                    and rolling hills, it offers a peaceful retreat for travelers seeking nature,
+                    heritage, and authentic tribal experiences.
+                </p>
+                <p>
+                    The region is famous for its refreshing climate, local tribal traditions,
+                    scenic viewpoints, and waterfalls. Visitors can explore village life,
+                    taste local food, enjoy nature walks, and witness colorful ethnic culture.
+                </p>
+            </div>
+
+            <div class="detail-card">
+                <h2>Best Time to Visit</h2>
+                <ul class="detail-list">
+                    <li><i class="fas fa-check-circle"></i> October to February for cool weather and sightseeing</li>
+                    <li><i class="fas fa-check-circle"></i> June to September for green landscapes and monsoon beauty</li>
+                    <li><i class="fas fa-check-circle"></i> Early mornings are best for scenic views and photography</li>
+                </ul>
+            </div>
+        </div>
+
+        <aside class="info-panel">
+            <div class="detail-card">
+                <h3>Quick Info</h3>
+                <ul class="mini-info">
+                    <li><strong>Location:</strong> Paderu, Andhra Pradesh</li>
+                    <li><strong>Distance:</strong> Around 105 km from Visakhapatnam</li>
+                    <li><strong>Best For:</strong> Nature, tribal culture, waterfalls</li>
+                    <li><strong>Weather:</strong> Pleasant and cool throughout the year</li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+</section>
+
+<!-- ================= SCENIC DESTINATIONS ================= -->
+
+<section class="location-directory">
+    <div class="section-heading">
+        <h2>Paderu Scenic Destinations</h2>
+    </div>
+    <div id="paderu-locations" class="paderu-location-grid"></div>
+</section>
+
+<!-- ================= LOCATION DETAILS ================= -->
+
+<section id="location-detail" class="location-detail">
+    <div class="section-heading">
+        <h2 id="location-title">Select a destination</h2>
+    </div>
+
+    <div class="location-detail-grid">
+        <div class="detail-card">
+            <div class="route-header">
+                <span><i class="fas fa-route"></i> Route from Paderu Town</span>
+                <strong id="route-duration">—</strong>
+            </div>
+            <p id="location-summary">Choose a scenic spot to see the travel route, nearby stays, and weather details.</p>
+            <ul id="location-facts" class="detail-list"></ul>
+            <div class="route-actions">
+                <a id="route-link" href="#" target="_blank" rel="noopener noreferrer" class="btn">Open Route Map</a>
+            </div>
+        </div>
+
+        <div class="detail-card weather-card">
+            <h3>Weather Condition</h3>
+            <div class="weather-box">
+                <div id="weather-temp" class="weather-temp">—</div>
+                <div id="weather-condition" class="weather-condition">—</div>
+            </div>
+            <ul id="weather-details" class="weather-list"></ul>
+        </div>
+    </div>
+
+    <div class="map-wrap">
+        <iframe id="location-map" src="https://www.google.com/maps?q=Paderu%20Andhra%20Pradesh&output=embed" width="100%" height="420" style="border:0; border-radius:18px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="nearby-grid">
+        <div class="detail-card">
+            <h3>Nearby Hotels</h3>
+            <ul id="hotel-list" class="nearby-list"></ul>
+        </div>
+
+        <div class="detail-card">
+            <h3>Nearby Restaurants</h3>
+            <ul id="restaurant-list" class="nearby-list"></ul>
+        </div>
+    </div>
+</section>
+
+<!-- ================= PAGE DATA AND INTERACTIONS ================= -->
+
+<script>
+    const paderuLocations = [
+        {
+            name: "Vanjangi Hills",
+            short: "Beautiful hill views and sunrise/cloud scenery",
+            route: "Drive from Paderu town through the hill road toward Vanjangi; scenic valley route with cool misty air.",
+            duration: "20–30 min drive",
+            mapQuery: "Paderu Town to Vanjangi Hills Paderu Andhra Pradesh",
+            weather: {
+                temp: "21°C",
+                title: "Cool & misty",
+                details: ["Morning fog is common", "Best for sunrise photography", "Light breeze and pleasant climate"]
+            },
+            hotels: ["Paderu Hill View Stay", "Green Valley Resort", "Tribal Forest Retreat"],
+            restaurants: ["Paderu town food court", "Local tribal café", "Hillside family restaurant"]
+        },
+        {
+            name: "Gadivasala View Point",
+            short: "Scenic valley and mountain viewpoint",
+            route: "Take the route from Paderu town to the Gadivasala viewpoint via the valley road and lookout stretch.",
+            duration: "15–25 min drive",
+            mapQuery: "Paderu Town to Gadivasala View Point Paderu Andhra Pradesh",
+            weather: {
+                temp: "23°C",
+                title: "Clear valley breeze",
+                details: ["Comfortable morning weather", "Good visibility in daylight", "Cool mountain air throughout the day"]
+            },
+            hotels: ["Green Valley Resort", "Hill Crest Lodge", "Paderu Homestay"],
+            restaurants: ["Tribal kitchen stop", "Paderu local tiffin center", "Forest view café"]
+        },
+        {
+            name: "Paderu Hill View Point",
+            short: "Panoramic views around Paderu",
+            route: "From central Paderu, head toward the hill viewpoint by the winding roads that showcase the valley landscape.",
+            duration: "10–20 min drive",
+            mapQuery: "Paderu Town to Paderu Hill View Point Andhra Pradesh",
+            weather: {
+                temp: "22°C",
+                title: "Pleasant hills",
+                details: ["Cool climate with low humidity", "Ideal for evening viewing", "Smooth breeze and scenic clouds"]
+            },
+            hotels: ["Paderu Hill View Stay", "Forest Retreat Inn", "Tribal Valley Guest House"],
+            restaurants: ["Paderu town restaurant", "Ammayi mess", "Hill view diner"]
+        },
+        {
+            name: "Vusiri Konda View Point",
+            short: "Natural hill and valley scenery",
+            route: "Follow the Paderu hill route to Vusiri Konda, where the road opens into a wide valley viewpoint and greenery.",
+            duration: "25–35 min drive",
+            mapQuery: "Paderu Town to Vusiri Konda View Point Paderu Andhra Pradesh",
+            weather: {
+                temp: "20°C",
+                title: "Cool & refreshing",
+                details: ["Frequent mist on the ridge", "Perfect for valley photography", "Best in early morning and dusk"]
+            },
+            hotels: ["Green Valley Resort", "Paderu Hill View Stay", "Cottages at the valley edge"],
+            restaurants: ["Local home food stall", "Tribal veg restaurant", "Paderu roadside kitchen"]
+        },
+        {
+            name: "Sunrise View Point",
+            short: "Suitable for sunrise and landscape photography",
+            route: "Start early from Paderu town and travel up to the sunrise point for a clear eastern view across the hills.",
+            duration: "15–25 min drive",
+            mapQuery: "Paderu Town to Sunrise View Point Paderu Andhra Pradesh",
+            weather: {
+                temp: "18°C",
+                title: "Bright sunrise weather",
+                details: ["Cool early morning conditions", "Best for sunrise shots", "Low cloud cover on clear days"]
+            },
+            hotels: ["Hill Crest Lodge", "Paderu Homestay", "Green Valley Resort"],
+            restaurants: ["Sunrise café", "Paderu breakfast center", "Village tiffin house"]
+        },
+        {
+            name: "MuGaPa Viewpoint",
+            short: "Another scenic viewpoint in the Paderu area",
+            route: "Travel from Paderu town toward the MuGaPa viewpoint via the scenic local roads with natural hill views.",
+            duration: "20–30 min drive",
+            mapQuery: "Paderu Town to MuGaPa Viewpoint Paderu Andhra Pradesh",
+            weather: {
+                temp: "22°C",
+                title: "Fresh and cloudy",
+                details: ["Cloudy hill atmosphere", "Great for landscape photography", "Light drizzles possible during monsoon"]
+            },
+            hotels: ["Paderu Hill View Stay", "Forest Retreat Inn", "Hilltop homestay"],
+            restaurants: ["Paderu local restaurant", "Valley food point", "Tribal cuisine corner"]
+        },
+        {
+            name: "Paderu Hill Station",
+            short: "Paderu's surrounding hills and natural landscapes",
+            route: "From Paderu town, follow the hill road loop around the station area, surrounded by cool forests and valleys.",
+            duration: "10–15 min drive",
+            mapQuery: "Paderu Town to Paderu Hill Station Andhra Pradesh",
+            weather: {
+                temp: "24°C",
+                title: "Pleasant hill station weather",
+                details: ["Mild evenings and cool evenings", "Great for relaxed sightseeing", "Open views of green hills"]
+            },
+            hotels: ["Green Valley Resort", "Paderu Hill View Stay", "Cultural Village Stay"],
+            restaurants: ["Hill station lunch point", "Paderu local tiffin center", "Forest side restaurant"]
+        },
+        {
+            name: "గుమ్మడి గుంట",
+            short: "A local natural attraction around Paderu",
+            route: "From Paderu town, reach the local natural attraction through the nearby village and hill roads with green surroundings.",
+            duration: "20–35 min drive",
+            mapQuery: "Paderu Town to Gummadi Gunta Paderu Andhra Pradesh",
+            weather: {
+                temp: "23°C",
+                title: "Fresh & earthy",
+                details: ["Cool and natural surroundings", "Best during daylight hours", "Good for short nature walks"]
+            },
+            hotels: ["Tribal Forest Retreat", "Green Valley Resort", "Paderu Homestay"],
+            restaurants: ["Village food house", "Traditional tribal eatery", "Paderu local meal point"]
+        }
+    ];
+
+    const locationGrid = document.getElementById('paderu-locations');
+    const locationTitle = document.getElementById('location-title');
+    const locationSummary = document.getElementById('location-summary');
+    const locationFacts = document.getElementById('location-facts');
+    const weatherTemp = document.getElementById('weather-temp');
+    const weatherCondition = document.getElementById('weather-condition');
+    const weatherDetails = document.getElementById('weather-details');
+    const routeDuration = document.getElementById('route-duration');
+    const routeLink = document.getElementById('route-link');
+    const locationMap = document.getElementById('location-map');
+    const hotelList = document.getElementById('hotel-list');
+    const restaurantList = document.getElementById('restaurant-list');
+
+    function renderLocationCards() {
+        locationGrid.innerHTML = paderuLocations.map((location, index) => `
+            <button class="paderu-location-card" data-index="${index}" type="button">
+                <div class="location-badge"><i class="fas fa-mountain"></i></div>
+                <h3>${location.name}</h3>
+                <p>${location.short}</p>
+                <span>View details</span>
+            </button>
+        `).join('');
+
+        document.querySelectorAll('.paderu-location-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const index = Number(card.dataset.index);
+                showLocation(index);
+            });
+        });
+    }
+
+    function showLocation(index, scroll = true) {
+        const location = paderuLocations[index];
+        locationTitle.textContent = location.name;
+        locationSummary.textContent = location.route;
+        routeDuration.textContent = location.duration;
+        routeLink.href = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent('Paderu Town Andhra Pradesh')}&destination=${encodeURIComponent(location.mapQuery)}`;
+        locationMap.src = `https://www.google.com/maps?q=${encodeURIComponent(location.mapQuery)}&output=embed`;
+
+        locationFacts.innerHTML = `
+            <li><i class="fas fa-map-marker-alt"></i> <span>${location.short}</span></li>
+            <li><i class="fas fa-clock"></i> <span>${location.duration} from Paderu town</span></li>
+            <li><i class="fas fa-cloud-sun-rain"></i> <span>${location.weather.title}</span></li>
+        `;
+
+        weatherTemp.textContent = location.weather.temp;
+        weatherCondition.textContent = location.weather.title;
+        weatherDetails.innerHTML = location.weather.details.map(item => `<li>${item}</li>`).join('');
+
+        hotelList.innerHTML = location.hotels.map(hotel => `<li><i class="fas fa-bed"></i> ${hotel}</li>`).join('');
+        restaurantList.innerHTML = location.restaurants.map(item => `<li><i class="fas fa-utensils"></i> ${item}</li>`).join('');
+
+        document.querySelectorAll('.paderu-location-card').forEach(card => {
+            card.classList.toggle('active', Number(card.dataset.index) === index);
+        });
+
+        if (scroll) {
+            document.getElementById('location-detail').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    renderLocationCards();
+    showLocation(0, false);
+</script>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+    <div class="footer-content">
+        <h2>🌿ASR TRIBAL TOURISM PORTAL</h2>
+        <p>Discover Nature • Preserve Culture • Empower Tribal Communities</p>
+
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <p class="copyright">© 2026 ASR Tribal Tourism Portal. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

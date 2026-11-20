@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Araku Valley | ASR Tribal Tourism Portal</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="destinations.css">
+    <link rel="stylesheet" href="araku.css">
+    <script src="araku.js" defer></script>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo new.png" alt="ASR Logo">
+            <span>ASR TRIBAL TOURISM PORTAL</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="destinations.html" class="active">Destinations</a></li>
+        </ul>
+
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+</header>
+
+<!-- ================= BACK NAVIGATION ================= -->
+
+<div class="detail-back-wrap">
+    <a href="destinations.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Destinations
+    </a>
+</div>
+
+<!-- ================= HERO ================= -->
+
+<section class="detail-hero-araku">
+    <div class="hero-overlay">
+        <h1>WELCOME TO ARAKU VALLEY</h1>
+        <p>
+            A peaceful hill station in the Eastern Ghats, famous for coffee plantations,
+            tribal heritage, misty valleys, and scenic landscapes.
+        </p>
+    </div>
+</section>
+
+<!-- ================= OVERVIEW ================= -->
+
+<section class="detail-page">
+    <div class="detail-container">
+        <div class="detail-content">
+            <div class="detail-card">
+                <h2>About Araku Valley</h2>
+                <p>
+                    Araku Valley is one of the most beautiful hill stations in Andhra Pradesh,
+                    known for its cool climate, lush greenery, and tribal culture. It is surrounded
+                    by dense forests, coffee gardens, waterfalls, and colorful valleys that make it
+                    a favorite destination for nature lovers and cultural travelers.
+                </p>
+                <p>
+                    The region is also famous for its indigenous tribal communities, organic coffee,
+                    scenic viewpoints, and opportunities for peaceful village experiences. Araku is a
+                    perfect place to relax, explore nature, and learn about the traditions of the local tribes.
+                </p>
+            </div>
+
+            <div class="detail-card">
+                <h2>Best Time to Visit</h2>
+                <ul class="detail-list">
+                    <li><i class="fas fa-check-circle"></i> October to February for cool weather and sightseeing</li>
+                    <li><i class="fas fa-check-circle"></i> June to September for lush green views and monsoon charm</li>
+                    <li><i class="fas fa-check-circle"></i> Early morning or sunset for beautiful valley views</li>
+                </ul>
+            </div>
+        </div>
+
+        <aside class="info-panel">
+            <div class="detail-card">
+                <h3>Quick Info</h3>
+                <ul class="mini-info">
+                    <li><strong>Location:</strong> Araku Valley, Andhra Pradesh</li>
+                    <li><strong>Distance:</strong> Around 115 km from Visakhapatnam</li>
+                    <li><strong>Best For:</strong> Coffee, valleys, tribal culture</li>
+                    <li><strong>Weather:</strong> Pleasant and cool all year</li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+</section>
+
+<!-- ================= PLACES AND LIVE WEATHER ================= -->
+
+<section class="places-section" id="araku-places">
+    <div class="section-heading">
+        <p class="section-kicker">ARAKU VALLEY EXPLORER</p>
+        <h2>Places to Visit in Araku Valley</h2>
+        <p>Choose a place to view it on the live map and explore the valley at your own pace.</p>
+    </div>
+
+    <div class="travel-tools">
+        <article class="weather-panel" aria-live="polite">
+            <div class="weather-icon"><i class="fas fa-cloud-sun"></i></div>
+            <div>
+                <p class="section-kicker">LIVE WEATHER</p>
+                <h3 id="weather-location">Araku Valley</h3>
+                <p id="weather-status">Loading current conditions...</p>
+            </div>
+            <strong id="weather-temperature">--°C</strong>
+        </article>
+
+        <div class="araku-map-wrap">
+            <iframe id="araku-map" title="Live map of Araku Valley" src="https://www.google.com/maps?q=Araku+Valley,+Andhra+Pradesh&output=embed" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <div class="araku-location-grid" id="araku-location-grid"></div>
+</section>
+
+<!-- ================= STAY OPTIONS ================= -->
+
+<section class="stay-section">
+    <div class="section-heading">
+        <h2>Hotels & Stay Options</h2>
+    </div>
+
+    <div class="stay-grid stay-tiles">
+        <div class="stay-card tile">
+            <img src="https://th.bing.com/th?id=OLC.a0gaM1qZvxevNg480x360&w=114&h=114&c=8&rs=1&qlt=90&cdv=1&pid=Local" alt="Araku Valley Resort">
+            <div class="stay-info">
+                <h3>Araku Valley Resort</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Near the main valley area</p>
+                <p><i class="fas fa-bed"></i> Deluxe rooms with valley views</p>
+                <p><i class="fas fa-phone"></i> Contact: +91 98654 21098</p>
+                <div class="stay-actions">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Araku+Valley+Resort" target="_blank" class="btn">View on Map</a>
+                    <a href="mailto:booking@arakuvalleyresort.example" class="btn btn-outline">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="stay-card tile">
+            <img src="https://th.bing.com/th/id/OLC.j6Wpvd0RavsptA480x360?w=114&h=114&c=8&rs=1&qlt=90&cdv=1&pid=Local" alt="Hill Crest Stay">
+            <div class="stay-info">
+                <h3>Hill Crest Stay</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Scenic hill-side location</p>
+                <p><i class="fas fa-bed"></i> Comfortable family rooms</p>
+                <p><i class="fas fa-phone"></i> Contact: +91 94444 77889</p>
+                <div class="stay-actions">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Hill+Crest+Stay+Araku" target="_blank" class="btn">View on Map</a>
+                    <a href="mailto:booking@hillcrest.example" class="btn btn-outline">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="stay-card tile">
+            <img src="https://th.bing.com/th/id/OLC.2jYHW90XV4FQ6w480x360?w=114&h=114&c=8&rs=1&qlt=90&cdv=1&pid=Local" alt="Tribal Retreat Lodge">
+            <div class="stay-info">
+                <h3>Tribal Retreat Lodge</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Surrounded by coffee plantations</p>
+                <p><i class="fas fa-bed"></i> Eco-friendly cottages</p>
+                <p><i class="fas fa-phone"></i> Contact: +91 98765 34123</p>
+                <div class="stay-actions">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Tribal+Retreat+Lodge+Araku" target="_blank" class="btn">View on Map</a>
+                    <a href="mailto:booking@triballodge.example" class="btn btn-outline">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="stay-card tile">
+            <img src="https://th.bing.com/th?id=OLC.z%2fMUMemMDfG20Q480x360&w=114&h=114&c=8&rs=1&qlt=90&cdv=1&pid=Local" alt="Ushodaya Resorts">
+            <div class="stay-info">
+                <h3>Ushodaya Resorts</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Popular resort near the valley</p>
+                <p><i class="fas fa-bed"></i> Family rooms & cottages</p>
+                <p><i class="fas fa-phone"></i> Contact: +91 91234 56789</p>
+                <div class="stay-actions">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Ushodaya+Resorts+Araku" target="_blank" class="btn">View on Map</a>
+                    <a href="mailto:booking@ushodaya.example" class="btn btn-outline">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="stay-card tile">
+            <img src="https://th.bing.com/th/id/OLC.8%2fy4YRzk6EBchQ480x360&w=114&h=114&c=8&rs=1&qlt=90&cdv=1&pid=Local" alt="Krishna Tara Comforts">
+            <div class="stay-info">
+                <h3>Krishna Tara Comforts</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Comfortable budget stay</p>
+                <p><i class="fas fa-bed"></i> Clean rooms & local food</p>
+                <p><i class="fas fa-phone"></i> Contact: +91 90123 45678</p>
+                <div class="stay-actions">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Krishna+Tara+Comforts+Araku" target="_blank" class="btn">View on Map</a>
+                    <a href="mailto:booking@krishnatara.example" class="btn btn-outline">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="stay-card tile">
+            <img src="https://th.bing.com/th/id/OLC.a0gaM1qZvxevNg480x360?w=114&h=114&c=8&rs=1&qlt=90&cdv=1&pid=Local" alt="Apple Resorts">
+            <div class="stay-info">
+                <h3>Apple Resorts</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Valley-facing resort</p>
+                <p><i class="fas fa-bed"></i> Resort amenities & restaurant</p>
+                <p><i class="fas fa-phone"></i> Contact: +91 93456 78901</p>
+                <div class="stay-actions">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Apple+Resorts+Araku" target="_blank" class="btn">View on Map</a>
+                    <a href="mailto:booking@appleresorts.example" class="btn btn-outline">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="stay-card tile">
+            <img src="https://th.bing.com/th/id/OLC.9aDglhRAH80xZA480x360?w=114&h=114&c=8&rs=1&qlt=90&cdv=1&pid=Local" alt="Green Valley Resort">
+            <div class="stay-info">
+                <h3>Green Valley Resort</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Quiet valley-side resort</p>
+                <p><i class="fas fa-bed"></i> Garden views & cottages</p>
+                <p><i class="fas fa-phone"></i> Contact: +91 94567 89012</p>
+                <div class="stay-actions">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Green+Valley+Resort+Araku" target="_blank" class="btn">View on Map</a>
+                    <a href="mailto:booking@greenvalley.example" class="btn btn-outline">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+    <div class="footer-content">
+        <h2>🌿ASR TRIBAL TOURISM PORTAL</h2>
+        <p>Discover Nature • Preserve Culture • Empower Tribal Communities</p>
+
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <p class="copyright">© 2026 ASR Tribal Tourism Portal. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,556 @@
+/*========================================
+   GOOGLE FONT & RESET
+========================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f7f9;
+    color:#333;
+    line-height:1.6;
+}
+
+/* make room for fixed navbar and prevent horizontal scrolling */
+body{ padding-top:100px; }
+html, body{ overflow-x: hidden; }
+
+/*========================================
+   NAVBAR
+========================================*/
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+}
+
+.navbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 8%;
+
+    background:rgba(0,0,0,.35);
+
+    backdrop-filter:blur(15px);
+
+    transition:.4s;
+
+    box-shadow:0 5px 20px rgba(234, 228, 228, 0.2);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:28px;
+    font-weight:700;
+    color:#fff;
+}
+
+.logo img{
+    width:80px;
+    height:80px;
+    object-fit:contain;
+    border-radius:50%;
+    transition:0.4s;
+}
+
+.logo img:hover{
+    transform:rotate(360deg) scale(1.1);
+}
+
+.logo span{
+    color:#fff;
+}
+
+.logo span:hover{
+    color:#FFC107;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.nav-links li{
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#fff;
+    font-size:17px;
+    font-weight:500;
+    transition:.35s;
+}
+
+.nav-links a:hover,
+.nav-links .active{
+    color:#ffcc00;
+}
+
+.menu-btn{
+    display:none;
+}
+
+/*========================================
+    HERO SECTION
+========================================*/
+
+.destination-hero{
+    width:100%;
+    height:80vh;
+    background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("destinationpic2.png");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+/* Attach hero banners to the fixed navbar so they sit directly under it */
+:root{ --nav-height:85px; }
+.hero,
+.destination-hero,
+.detail-hero,
+.detail-hero-araku{
+    margin-top: calc(-1 * var(--nav-height));
+    padding-top: var(--nav-height);
+}
+
+@media (max-width: 768px){
+    /* On small screens navbar becomes taller / stacked — avoid negative pull */
+    .hero,
+    .destination-hero,
+    .detail-hero,
+    .detail-hero-araku{ margin-top: 0; padding-top: 24px; }
+}
+
+.hero-overlay{
+    color:#fff;
+}
+
+.hero-overlay h1{
+    font-size:60px;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.hero-overlay p{
+    width:70%;
+    margin:auto;
+    font-size:20px;
+    margin-bottom:35px;
+}
+
+.hero-search{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero-search input{
+    width:500px;
+    padding:17px;
+    border:none;
+    outline:none;
+    border-radius:50px 0 0 50px;
+    font-size:16px;
+}
+
+.hero-search button{
+    width: 80px;
+    height: 53px;
+    border:none;
+    background:#ff9800;
+    color:#fff;
+    cursor:pointer;
+    font-size:22px;
+    border-radius:0 50px 50px 0;
+}
+
+.hero-search button:hover{
+    background:#f57c00;
+}
+
+/*========================================
+   SECTION TITLE
+========================================*/
+
+.section-title{
+    text-align:center;
+    padding:80px 20px 40px;
+}
+
+.section-title h2{
+    font-size:42px;
+    color:#0d5c3d;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#666;
+    font-size:18px;
+}
+
+/*========================================
+   DESTINATION SECTION
+========================================*/
+
+.destination-section{
+    width:90%;
+    margin:auto;
+    padding-bottom:70px;
+}
+
+.destination-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:35px;
+
+}
+
+/*========================================
+   DESTINATION CARD
+========================================*/
+
+.destination-card{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    transition:.4s;
+}
+
+.destination-card:hover{
+    transform:translateY(-10px);
+}
+
+.destination-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.destination-content{
+    padding:25px;
+}
+
+.destination-content h3{
+    color:#0d5c3d;
+    font-size:26px;
+    margin-bottom:15px;
+}
+
+.destination-content p{
+    color:#666;
+    margin-bottom:20px;
+}
+
+.destination-info{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+    color:#444;
+    font-size:15px;
+}
+
+.destination-info span{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.destination-info i{
+    color:#ff9800;
+}
+
+/*========================================
+   BUTTON
+========================================*/
+
+.btn{
+    display:inline-block;
+    width:100%;
+    text-align:center;
+    padding:14px;
+    background:#385c0d;
+    color:#fff;
+    text-decoration:none;
+    border-radius:8px;
+    transition:.3s;
+    font-weight:600;
+}
+
+.btn:hover{
+    background:#b9be11;
+}
+
+/* PADERU styles moved to paderu.css */
+
+/*========================================
+   WHY VISIT
+========================================*/
+
+.why-visit{
+    padding:80px 8%;
+    background:#eef8f1;
+}
+
+.why-visit h2{
+    text-align:center;
+    color:#0d5c3d;
+    font-size:40px;
+    margin-bottom:50px;
+}
+
+.visit-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+.visit-box{
+    background:#fff;
+    padding:35px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.10);
+    transition:.4s;
+}
+
+.visit-box:hover{
+    transform:translateY(-8px);
+}
+
+.visit-box i{
+    font-size:55px;
+    color:#0d5c3d;
+    margin-bottom:20px;
+}
+
+.visit-box h3{
+    margin-bottom:15px;
+    color:#333;
+}
+
+.visit-box p{
+    color:#666;
+}
+
+/*========================================
+   RESPONSIVE
+========================================*/
+
+@media(max-width:992px){
+
+    .navbar{
+        padding:15px 5%;
+    }
+
+    .nav-links{
+        gap:20px;
+    }
+
+    .hero-overlay h1{
+        font-size:42px;
+    }
+
+    .hero-overlay p{
+        width:90%;
+    }
+
+    .hero-search input{
+        width:350px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .hero-overlay h1{
+        font-size:34px;
+    }
+
+    .hero-overlay p{
+        font-size:16px;
+    }
+
+    .hero-search{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .hero-search input{
+        width:100%;
+        border-radius:50px;
+    }
+
+    .hero-search button{
+        width:180px;
+        border-radius:50px;
+        padding:14px;
+    }
+
+    .section-title h2{
+        font-size:32px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .logo span{
+        font-size:16px;
+    }
+
+    .hero-overlay h1{
+        font-size:28px;
+    }
+
+    .hero-overlay p{
+        font-size:15px;
+    }
+
+    .destination-content h3{
+        font-size:22px;
+    }
+
+    .why-visit h2{
+        font-size:30px;
+    }
+
+}
+/*==========================
+      FOOTER
+==========================*/
+
+footer{
+
+    background:linear-gradient(135deg,#0f5132,#1B5E20);
+
+    color:#fff;
+
+    text-align:center;
+
+    padding:70px 8% 30px;
+}
+
+.footer-content h2{
+
+    font-size:34px;
+
+    margin-bottom:15px;
+}
+
+.footer-content p{
+
+    color:#ddd;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+}
+
+/* Social Icons */
+
+.social{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    margin-bottom:35px;
+}
+
+.social a{
+
+    width:55px;
+
+    height:55px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(255,255,255,.12);
+
+    border-radius:50%;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    font-size:22px;
+
+    transition:.4s;
+}
+
+.social a:hover{
+
+    background:#FFD54F;
+
+    color:#1B5E20;
+
+    transform:translateY(-8px) rotate(360deg);
+}
+
+footer hr{
+
+    border:none;
+
+    height:1px;
+
+    background:rgba(255,255,255,.2);
+
+    margin:30px 0;
+}
+
+.copyright{
+
+    color:#bbb;
+
+    font-size:15px;
+}

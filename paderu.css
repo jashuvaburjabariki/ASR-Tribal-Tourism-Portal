@@ -1,0 +1,365 @@
+/*========================================
+    BACK NAVIGATION
+========================================*/
+
+.detail-back-wrap{
+    position:fixed;
+    top:150px;
+    left:30px;
+    z-index:1001;
+    border-radius:16px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.back-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 22px;
+    background:linear-gradient(135deg,#0d5c3d,#1f7a4c);
+    color:#fff;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    box-shadow:0 10px 20px rgba(13,92,61,0.2);
+    transition:0.3s ease;
+    white-space:nowrap;
+}
+
+.back-btn:hover{
+    transform:translateY(-3px);
+    background:linear-gradient(135deg,#d0cd10,#1b6b42);
+}
+
+/*========================================
+    HERO BANNERS
+========================================*/
+
+.detail-hero{
+    width:100%;
+    height:70vh;
+    background:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+    url("PADERU HRO.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#fff;
+    margin-top:0;
+}
+.detail-hero-araku{
+    width:100%;
+    height:70vh;
+    background:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+    url("HOME1.jpg.jpeg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#fff;
+    margin: 20px 0;
+}
+/* Attach hero banners to the fixed navbar so they sit directly under it */
+:root{ --nav-height:85px; }
+.hero,
+.destination-hero,
+.detail-hero,
+.detail-hero-araku{
+    margin-top: calc(-1 * var(--nav-height));
+    padding-top: var(--nav-height);
+}
+
+@media (max-width: 768px){
+    /* On small screens navbar becomes taller / stacked — avoid negative pull */
+    .hero,
+    .destination-hero,
+    .detail-hero,
+    .detail-hero-araku{ margin-top: 0; padding-top: 24px; }
+}
+/*========================================
+    OVERVIEW AND SHARED DETAIL COMPONENTS
+========================================*/
+
+.detail-page,
+.map-section,
+.stay-section,
+.places-section{
+    padding:80px 8%;
+}
+
+.detail-container{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:30px;
+    align-items:start;
+}
+
+.detail-card{
+    background:#fff;
+    border-radius:18px;
+    padding:30px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    margin-bottom:25px;
+}
+
+.detail-card h2,
+.detail-card h3,
+.section-heading h2{
+    color:#0d5c3d;
+    margin-bottom:18px;
+}
+
+.detail-card p,
+.detail-list li,
+.mini-info li,
+.place-card p,
+.stay-card p{
+    color:#555;
+    line-height:1.8;
+}
+
+/* Hotels tile mode */
+.stay-tiles{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:24px;
+    align-items:stretch;
+}
+
+.stay-card.tile{
+    background:#fff;
+    border-radius:14px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    box-shadow:0 10px 22px rgba(0,0,0,0.06);
+}
+
+.stay-card.tile img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    display:block;
+}
+
+.stay-info{
+    padding:16px 18px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    flex:1 1 auto;
+}
+
+.stay-info h3{font-size:1.05rem;color:#0d5c3d;margin:0}
+.stay-info p{margin:0;color:#555;font-size:0.95rem}
+
+.stay-actions{display:flex;gap:12px;padding:16px;background:transparent}
+.stay-actions .btn{flex:1;min-width:120px}
+
+@media(max-width:720px){
+    .stay-actions{flex-direction:column}
+    .stay-actions .btn{width:100%}
+}
+
+.detail-list{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.detail-list li,
+.mini-info li{
+    margin-bottom:12px;
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+}
+
+.detail-list i,
+.stay-card i,
+.place-card i{
+    color:#ff9800;
+}
+
+.info-panel .detail-card{
+    background:#eef8f1;
+}
+
+.mini-info{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.section-heading{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.section-heading h2{
+    font-size:42px;
+}
+
+
+/*========================================
+    LOCATION DIRECTORY
+========================================*/
+
+.location-directory,
+.location-detail{
+    padding:80px 8%;
+}
+
+.paderu-location-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.paderu-location-card{
+    background:#fff;
+    border:1px solid rgba(13,92,61,0.08);
+    border-radius:18px;
+    padding:22px 18px;
+    text-align:left;
+    box-shadow:0 12px 28px rgba(0,0,0,.06);
+    cursor:pointer;
+    transition:.3s ease;
+    color:#1b4d3c;
+}
+
+.paderu-location-card:hover,
+.paderu-location-card.active{
+    transform:translateY(-6px);
+    background:linear-gradient(135deg,#ecf8ef,#fafaf3);
+    border-color:rgba(200, 194, 17, 0.959);
+}
+
+.location-badge{
+    width:52px;
+    height:52px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:14px;
+    background:linear-gradient(135deg,#dff4e7,#f8ebbf);
+    color:#0d5c3d;
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.paderu-location-card h3{
+    margin:0 0 10px;
+    font-size:1.3rem;
+}
+
+.paderu-location-card p{
+    margin:0 0 16px;
+    color:#555555;
+    line-height:1.7;
+}
+
+.paderu-location-card span{
+    display:inline-block;
+    color:#0d5c3d;
+    font-weight:600;
+}
+
+/*========================================
+    LOCATION DETAILS, WEATHER, AND NEARBY OPTIONS
+========================================*/
+
+.location-detail-grid,
+.nearby-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    margin-bottom:30px;
+}
+
+.route-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:18px;
+    color:#0d5c3d;
+    font-weight:600;
+}
+
+.route-header i,
+.weather-box i,
+.nearby-list i{
+    color:#ff9800;
+}
+
+.route-actions{
+    margin-top:18px;
+}
+
+.weather-card h3{
+    margin-bottom:18px;
+}
+
+.weather-box{
+    background:linear-gradient(135deg,#eef8f1,#fff7e7);
+    border-radius:16px;
+    padding:20px;
+    margin-bottom:18px;
+}
+
+.weather-temp{
+    font-size:2.2rem;
+    font-weight:700;
+    color:#0d5c3d;
+}
+
+.weather-condition{
+    margin-top:8px;
+    color:#1f7a4c;
+    font-weight:600;
+}
+
+.weather-list,
+.nearby-list{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.weather-list li,
+.nearby-list li{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    line-height:1.8;
+    color:#555;
+    margin-bottom:10px;
+}
+
+.nearby-list i{
+    margin-top:4px;
+}
+
+@media (max-width: 768px){
+    .detail-back-wrap{
+        position:static;
+        margin:20px 20px 0;
+    }
+
+    .detail-hero{
+        height:55vh;
+    }
+
+    .section-heading h2{
+        font-size:30px;
+    }
+}
