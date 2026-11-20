@@ -216,3 +216,4 @@ document.addEventListener("DOMContentLoaded", () => {
     // Fetch live weather
     loadWeather();
 });
+
